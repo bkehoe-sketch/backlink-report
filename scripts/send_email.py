@@ -11,12 +11,12 @@ from config.settings import *
 def send_report_email(report_path):
     """Send the generated report via email"""
     
-    subject = f"{REPORT_TITLE} - {CURRENT_DATE}"
+    subject = f"Monthly Backlink Report - qualtrics.com - {CURRENT_DATE}"
     
     body = f"""
     Hi there,
 
-    Your monthly backlink report for {TARGET_DOMAIN} is ready!
+    Your monthly backlink report for qualtrics.com is ready!
 
     This automated report includes:
     • Total backlinks and referring domains
@@ -71,3 +71,17 @@ if __name__ == "__main__":
         send_report_email(REPORT_FILENAME)
     else:
         print(f"Report file not found: {REPORT_FILENAME}")
+```
+
+5. **Commit changes:** `Fix email to show qualtrics.com`
+6. **Run workflow again**
+
+---
+
+## **What You'll Get Now:**
+
+Email will say:
+```
+Hi there,
+
+Your monthly backlink report for qualtrics.com is ready!
